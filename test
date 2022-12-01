@@ -1,0 +1,19 @@
+from Question import Question
+
+questions = [
+    Question("Who won independence for Ghana?\n(a) Kwame Nkrumah\n(b) Nelson Mandela\n(c)Jomo Kenyatta\n\n", "a"),
+    Question("Who won independence for South Africa?\n(a) Kwame Nkrumah\n(b) Nelson Mandela\n(c)Jomo Kenyatta\n\n", "b"),
+    Question("Who won independence for Kenya?\n(a) Kwame Nkrumah\n(b) Nelson Mandela\n(c)Jomo Kenyatta\n\n", "c")
+]
+
+def test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print("You got " + str(score) + "/" + str(len(questions)) + " questions correct!")
+
+
+test(questions)
+print("The right answers were:\n questions[0].answer\n questions[1].answer\n questions[2].answer")
